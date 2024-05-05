@@ -1,9 +1,11 @@
 import './App.css';
+import PageContainer from './components/PageContainer';
 
 function App() {
   return (
     <div className="App">
-      Job Search
+      <div>Job Search</div>
+      <PageContainer/>
     </div>
   );
 }
