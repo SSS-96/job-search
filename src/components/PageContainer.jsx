@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import FilterComponent from './Filter/FilterComponent';
+import FilterContainer from './Filter/FilterContainer';
 import CardContainer from './Card/CardContainer';
 
 function PageContainer() {
@@ -33,7 +33,7 @@ function PageContainer() {
 
     return (
         <div className='pageContainer'>
-            <FilterComponent/>
+            <FilterContainer/>
             <CardContainer cardData={cardData}/>
         </div>
     )

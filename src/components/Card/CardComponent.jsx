@@ -15,6 +15,7 @@ const obj =         {
   "companyName": "LG",
   "logoUrl": "https://logo.clearbit.com/lg.com"
 }
+
 function CardComponent(props) {
   const renderHeader = () => {
     return (
