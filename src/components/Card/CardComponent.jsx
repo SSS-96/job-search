@@ -20,7 +20,7 @@ function CardComponent(props) {
   const renderHeader = () => {
     return (
       <div className='card-header'>
-        <div className='card-header-postTime'>{`Posted ${Math.ceil(Math.random() * 10)} days ago`}</div>
+        <div className='card-header-postTime'>{`⏳ Posted ${Math.ceil(Math.random() * 10)} days ago`}</div>
         <div className='card-header-title'>
           <img className='card-header-url' src={props?.logoUrl} alt='companyLogo' />
           <div className='card-header-info'>
@@ -29,22 +29,25 @@ function CardComponent(props) {
             <div className='card-header-info-location'>{props?.location}</div>
           </div>
         </div>
-        {(props?.minJdSalary || props?.maxJdSalary) ? <div className='card-header-salaryInfo'>{`Estimated Salary: ₹ ${props?.minJdSalary} - ${props?.maxJdSalary} LPA`}</div> : null}
       </div>
     )
   }
   const renderBody = () => {
     return (
       <div className='card-body'>
-        <div className='card-body-title'>About Company</div>
+        {(props?.minJdSalary || props?.maxJdSalary) ? <div className='card-body-salaryInfo'>{`Estimated Salary: ₹ ${props?.minJdSalary} - ${props?.maxJdSalary} LPA  ✅`}</div> : null}
+        <div className='card-body-title'>About Company:</div>
         <div className='card-body-subtitle'>About Us</div>
         <div className='card-body-description'>{props.jobDetailsFromCompany}</div>
+        {props?.minExp && <div className='card-body-minimumExperience-title'>Minimum Experience</div>}
+        {props?.minExp && <div className='card-body-minimumExperience-value'>{`${props?.minExp} years`}</div>}
       </div>
     )
   }
   const renderFooter = () => {
     return (
       <div className='card-footer'>
+        <div className='card-footer-action' role='button'>⚡ Easy Apply</div>
       </div>
     )
   }

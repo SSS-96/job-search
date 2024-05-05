@@ -1,49 +1,121 @@
 .cardContainer{
     display:flex;
     flex-wrap:wrap;
+    justify-content: center;
     gap:12px;
+    margin-top: 60px;
 }
 .card {
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px 90px 20px 10px;
     padding: 24px;
     /* border: 1px solid grey; */
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 1px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    min-width: 360px;
 }
 .card-header{
     display: flex;
     gap: 15px;
     flex-direction: column;
 }
+.card-header-info{
+    text-align: left;
+}
+.card-header-info-companyName{
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+    color: #8b8b8b;
+    text-transform: capitalize;
+}
+.card-header-info-jobRole{
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: '__LexendFont_7838d2,__LexendFont_Fallback_7838d2';
+    text-transform: capitalize;
+}
+.card-header-info-location{
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
 .card-header-url{
-    height: 15px;
-    width: 15px;
+    height: 35px;
+    width: 25px;
 }
 .card-header-postTime{
+    padding: 3px;
     border-radius: 10px;
     border: 1px solid gray;
+    font-family: __LexendFont_7838d2, __LexendFont_Fallback_7838d2;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 9px;
+    width:95px;
 }
 .card-header-title{
     display: flex;
     gap: 10px;
     justify-items: center;
 }
+.card-body-salaryInfo{
+    margin: 9px 0px;
+    font-weight: 400;
+    font-family: '__LexendFont_7838d2,__LexendFont_Fallback_7838d2';
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
 .card-body{
-    max-width: 250px;
+    max-width: 350px;
     display: flex;
-    gap: 4px;
+    gap: 3px;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
 }
 .card-body-title{
-    font-size: 18px;
+    /* font-size: 18px; */
+    letter-spacing: 0.3px;
+    line-height: 1.5;
+    font-weight: 500;
 }
-.card-body-subTitle{
-    font-size: 16px;
+.card-body-subtitle{
+    font-size: 14px;
+    font-weight: 600;
 }
 .card-body-description{
     font-size: 14px;
     text-align: justify;
+    font-weight: 400;
+}
+.card-body-minimumExperience-title{
+    margin-top:10px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+    color: #8b8b8b;
+    text-transform: capitalize;
+}
+.card-body-minimumExperience-value{
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: __LexendFont_7838d2, __LexendFont_Fallback_7838d2;
+}
+.card-footer-action{
+    margin-top: 10px;
+    border: 0.5px solid rgb(85, 239, 196);
+    background-color: rgb(85, 239, 196);
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    padding: 14px 18px;
 }

@@ -8,6 +8,7 @@ function PageContainer() {
     const [loading, setLoading] = useState(false);
     const [offset, setOffset] = useState(0);
     const [limit, setLimit] = useState(5);
+    const [filterObject, setfilterObject] = useState({})
     // service call for api
     const fetchData = () => {
         setLoading(true)
@@ -56,9 +57,16 @@ function PageContainer() {
         fetchData();
     },[offset])
 
+    const setFilter = payload => {
+        setfilterObject({
+            ...filterObject,
+            [payload.name]:payload.filterData
+        })
+    }
+
     return (
         <div className='pageContainer'>
-            <FilterContainer/>
+            <FilterContainer setFilter={setFilter}/>
             {loading ? <p>Loading...</p> : <CardContainer cardData={cardData}/>}
         </div>
     )
