@@ -36,7 +36,7 @@ function PageContainer() {
     const handleScroll = () => {
         // Check if user has scrolled to the bottom of the page
         if (
-            window.innerHeight + document.documentElement.scrollTop ===
+            window.innerHeight + document.documentElement.scrollTop + 20 >
             document.documentElement.offsetHeight
         ) {
             setOffset(prevState => prevState + 10);
@@ -67,7 +67,7 @@ function PageContainer() {
     return (
         <div className='pageContainer'>
             <FilterContainer setFilter={setFilter}/>
-            {loading ? <p>Loading...</p> : <CardContainer cardData={cardData}/>}
+            {loading ? <p>Loading...</p> : <CardContainer cardData={cardData} filterObject={filterObject}/>}
         </div>
     )
 }

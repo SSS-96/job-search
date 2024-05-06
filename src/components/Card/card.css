@@ -17,6 +17,9 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     min-width: 360px;
 }
+.card:hover{
+    transform: scale(1.05);
+}
 .card-header{
     display: flex;
     gap: 15px;

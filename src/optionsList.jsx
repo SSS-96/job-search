@@ -296,6 +296,7 @@ export const optionsList = {
     },
     noOfEmployee :{
         label: 'Number of Employees',
+        type: 'singleSelect',
         options : [
             {
             "value": "1-10",
@@ -329,6 +330,7 @@ export const optionsList = {
     },
     experience: {
         label: 'Experience',
+        type: 'multiSelect',
         options : [
             {
             "value": "1",
@@ -374,6 +376,7 @@ export const optionsList = {
     },
     remote:{
         label:'Remote',
+        type:'multiSelect',
         options : [
             {
               "value": "Remote",
@@ -391,6 +394,7 @@ export const optionsList = {
     },
     minSalary:{
         label: 'Minimum Base Pay Salary',
+        type: 'singleSelect',
         options :[
             {
               "value": "0L",
